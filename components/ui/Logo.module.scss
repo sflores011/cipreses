@@ -1,0 +1,14 @@
+.wrap {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.inverted .image {
+  filter: brightness(0) invert(1);
+}

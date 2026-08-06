@@ -1,0 +1,105 @@
+@use "../../styles/variables" as v;
+
+.footer {
+  background: v.$color-primary;
+  padding-block: clamp(4rem, 7vw, 5.5rem) 32px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 1fr;
+  gap: 40px;
+
+  @media (max-width: v.$bp-tablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: v.$bp-mobile) {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+
+  @media (max-width: v.$bp-tablet) {
+    grid-column: 1 / -1;
+  }
+}
+
+.description {
+  max-width: 320px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.social {
+  display: flex;
+  gap: 12px;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: v.$color-white;
+  transition: background-color v.$transition-fast, border-color v.$transition-fast;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: v.$color-white;
+  }
+}
+
+.menuTitle {
+  color: v.$color-white;
+  font-size: 14px;
+  font-weight: v.$fw-semibold;
+  margin-bottom: 16px;
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menuLink {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 13px;
+  transition: color v.$transition-fast;
+
+  &:hover {
+    color: v.$color-white;
+  }
+}
+
+.callout {
+  @media (max-width: v.$bp-mobile) {
+    grid-column: auto;
+  }
+}
+
+.calloutTitle {
+  color: v.$color-white;
+  font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+  font-weight: v.$fw-semibold;
+  line-height: 1.25;
+  margin-bottom: 22px;
+}
+
+.copyright {
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 11px;
+}

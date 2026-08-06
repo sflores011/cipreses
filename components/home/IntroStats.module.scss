@@ -1,0 +1,47 @@
+@use "../../styles/variables" as v;
+
+.section {
+  padding-top: clamp(3rem, 6vw, 5rem);
+  padding-bottom: clamp(3.5rem, 7vw, 6.5rem);
+}
+
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-bottom: clamp(3rem, 6vw, 5.5rem);
+  border-bottom: 1px solid v.$color-border-soft;
+}
+
+.title {
+  flex: 0 1 42%;
+  min-width: 300px;
+  font-size: clamp(1.85rem, 2.6vw, 2.4rem);
+  font-weight: v.$fw-bold;
+  line-height: 1.15;
+  color: v.$color-text;
+}
+
+.copy {
+  flex: 1 1 46%;
+  min-width: 300px;
+}
+
+.paragraph {
+  font-size: 15px;
+  line-height: 1.55;
+  color: v.$color-text-muted;
+
+  strong {
+    font-weight: v.$fw-semibold;
+    color: v.$color-text;
+  }
+}
+
+.cta {
+  margin-top: 22px;
+}
+
+.statsWrap {
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+}

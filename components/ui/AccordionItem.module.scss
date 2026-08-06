@@ -1,0 +1,75 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.item {
+  background: v.$color-white;
+  border-radius: v.$radius-faq;
+  box-shadow: v.$shadow-faq;
+  overflow: hidden;
+}
+
+.heading {
+  margin: 0;
+}
+
+.trigger {
+  @include m.button-reset;
+  @include m.focus-ring;
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 26px;
+  text-align: left;
+}
+
+.icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid v.$color-border-soft;
+  color: v.$color-text-muted;
+  transition: color v.$transition-base, border-color v.$transition-base;
+}
+
+.open .icon {
+  color: v.$color-primary;
+  border-color: v.$color-primary;
+}
+
+.question {
+  font-size: 14px;
+  font-weight: v.$fw-semibold;
+  color: v.$color-text;
+}
+
+.panel {
+  display: grid;
+  transition: grid-template-rows v.$transition-base;
+}
+
+.panelInner {
+  overflow: hidden;
+}
+
+.answer {
+  padding: 0 26px 22px 66px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: v.$color-text-muted;
+}
+
+@media (max-width: v.$bp-mobile) {
+  .trigger {
+    padding: 18px 20px;
+  }
+
+  .answer {
+    padding: 0 20px 18px 54px;
+  }
+}

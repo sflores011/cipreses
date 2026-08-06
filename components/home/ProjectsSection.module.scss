@@ -1,0 +1,111 @@
+@use "../../styles/variables" as v;
+
+.section {
+  padding-block: clamp(3.5rem, 7vw, 6rem);
+}
+
+.topRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+
+  @media (max-width: v.$bp-tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+  }
+
+  @media (max-width: v.$bp-mobile) {
+    :nth-child(4),
+    :nth-child(5) {
+      display: none;
+    }
+  }
+}
+
+.topImage {
+  position: relative;
+  flex: 1 1 0;
+  aspect-ratio: 1 / 1.1;
+  border-radius: v.$radius-card-sm;
+  overflow: hidden;
+  background: v.$color-card-bg;
+
+  &[data-offset="1"] {
+    margin-bottom: 26px;
+
+    @media (max-width: v.$bp-tablet) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.image {
+  object-fit: cover;
+}
+
+.middleRow {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 720px) 1fr;
+  align-items: center;
+  gap: 32px;
+
+  @media (max-width: v.$bp-tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sideImage {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: v.$radius-card-lg;
+  overflow: hidden;
+  background: v.$color-card-bg;
+
+  @media (max-width: v.$bp-tablet) {
+    order: 3;
+  }
+}
+
+.centerBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.title {
+  font-weight: v.$fw-bold;
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  line-height: 1.18;
+}
+
+.titleLine {
+  display: block;
+  color: v.$color-text-muted;
+}
+
+.titleLineStrong {
+  position: relative;
+  display: inline-block;
+  color: v.$color-text-secondary;
+}
+
+.underline {
+  height: 14px;
+}
+
+.paragraph {
+  max-width: 620px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: v.$color-text-muted;
+
+  strong {
+    font-weight: v.$fw-semibold;
+    color: v.$color-text;
+  }
+}

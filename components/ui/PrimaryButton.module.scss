@@ -1,0 +1,45 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 42px;
+  padding-inline: 22px;
+  border-radius: v.$radius-button;
+  background: v.$color-primary;
+  color: v.$color-white;
+  font-size: 13px;
+  font-weight: v.$fw-semibold;
+  line-height: 1;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  transition: background-color v.$transition-base, transform v.$transition-fast;
+
+  @include m.focus-ring;
+
+  &:hover {
+    background: v.$color-primary-hover;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.inverse {
+  background: v.$color-white;
+  color: v.$color-primary;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.88);
+  }
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+}

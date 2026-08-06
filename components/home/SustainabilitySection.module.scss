@@ -1,0 +1,104 @@
+@use "../../styles/variables" as v;
+
+.section {
+  padding-bottom: clamp(3.5rem, 7vw, 6rem);
+}
+
+.card {
+  position: relative;
+  border-radius: v.$radius-card-lg;
+  overflow: hidden;
+  min-height: 460px;
+  display: flex;
+  align-items: flex-end;
+
+  @media (max-width: v.$bp-tablet) {
+    min-height: 620px;
+  }
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 24, 66, 0.3) 0%,
+    rgba(15, 24, 66, 0.5) 50%,
+    rgba(15, 24, 66, 0.82) 100%
+  );
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 8%;
+
+  @media (max-width: v.$bp-tablet) {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 40px 28px;
+  }
+}
+
+.eyebrow {
+  display: block;
+  color: v.$color-white;
+  font-size: 13px;
+  font-weight: v.$fw-semibold;
+  opacity: 0.85;
+  margin-bottom: 14px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.paragraph {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 14px;
+  line-height: 1.55;
+  max-width: 460px;
+}
+
+.cta {
+  margin-top: 22px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+
+  @media (min-width: v.$bp-tablet) {
+    align-items: flex-end;
+    text-align: right;
+  }
+}
+
+.title {
+  color: v.$color-white;
+  font-size: clamp(1.9rem, 3vw, 2.7rem);
+  font-weight: v.$fw-semibold;
+  line-height: 1.2;
+}
+
+.highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.underline {
+  height: 12px;
+}

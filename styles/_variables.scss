@@ -1,0 +1,53 @@
+// Colores
+$color-primary: #233180;
+$color-primary-dark: #1a2563;
+$color-primary-hover: #1c2769;
+$color-white: #ffffff;
+$color-text: #000000;
+$color-text-secondary: #161f52;
+$color-text-muted: #5c6270;
+$color-card-bg: rgba(217, 217, 217, 0.35);
+$color-bg-muted: #f5f5f5;
+$color-accent-blue: #2e5aff;
+$color-border-soft: rgba(0, 0, 0, 0.06);
+$color-shadow-soft: rgba(20, 38, 92, 0.08);
+
+// Tipografía
+$font-family-base: var(--font-poppins), "Poppins", "Gotham", Arial, sans-serif;
+
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+$fw-black: 800;
+
+// Contenedor
+$container-max-width: 1220px;
+$container-padding-desktop: 40px;
+$container-padding-tablet: 28px;
+$container-padding-mobile: 20px;
+
+// Radios
+$radius-button: 8px;
+$radius-card-sm: 16px;
+$radius-card-lg: 22px;
+$radius-faq: 6px;
+
+// Sombras
+$shadow-soft: 0 8px 24px rgba(20, 38, 92, 0.08);
+$shadow-faq: 0 4px 18px rgba(20, 38, 92, 0.06);
+
+// Transiciones
+$transition-fast: 200ms ease;
+$transition-base: 250ms ease;
+
+// Breakpoints
+$bp-desktop-xl: 1440px;
+$bp-desktop: 1200px;
+$bp-laptop: 1024px;
+$bp-tablet: 768px;
+$bp-mobile: 480px;
+
+// Espaciado entre secciones
+$section-spacing-desktop: 110px;
+$section-spacing-mobile: 72px;

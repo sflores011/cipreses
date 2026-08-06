@@ -1,0 +1,127 @@
+@use "../../styles/variables" as v;
+
+.section {
+  padding-top: clamp(5rem, 8vw, 6.5rem);
+  padding-bottom: clamp(7.5rem, 12vw, 9.5rem);
+}
+
+.card {
+  position: relative;
+  border-radius: v.$radius-card-lg;
+  overflow: hidden;
+  min-height: 480px;
+  display: flex;
+  align-items: flex-end;
+
+  @media (max-width: v.$bp-tablet) {
+    min-height: 700px;
+  }
+}
+
+.image {
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(11, 19, 34, 0.72) 0%,
+      rgba(11, 19, 34, 0.18) 62%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(11, 19, 34, 0.45),
+      transparent 65%
+    );
+
+  @media (max-width: v.$bp-tablet) {
+    background:
+      linear-gradient(
+        to top,
+        rgba(11, 19, 34, 0.85) 0%,
+        rgba(11, 19, 34, 0.35) 60%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(11, 19, 34, 0.55),
+        transparent 70%
+      );
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding: 0 60px 60px;
+
+  @media (max-width: v.$bp-tablet) {
+    grid-template-columns: 1fr;
+    padding: 26px;
+    gap: 20px;
+  }
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: v.$color-white;
+  font-size: 14px;
+  font-weight: v.$fw-medium;
+  margin-bottom: 14px;
+}
+
+.eyebrowLine {
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: v.$color-white;
+  opacity: 0.7;
+}
+
+.title {
+  color: v.$color-white;
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  font-weight: v.$fw-semibold;
+  line-height: 1.1;
+  max-width: 540px;
+}
+
+.highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.underline {
+  height: 12px;
+}
+
+.right {
+  display: flex;
+  align-items: flex-end;
+}
+
+.paragraph {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 580px;
+
+  strong {
+    font-weight: v.$fw-semibold;
+    color: v.$color-white;
+  }
+}

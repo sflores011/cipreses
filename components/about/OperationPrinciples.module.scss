@@ -1,0 +1,91 @@
+@use "../../styles/variables" as v;
+
+.section {
+  padding-block: clamp(4rem, 7vw, 6.5rem);
+}
+
+.heading {
+  margin-bottom: clamp(3.5rem, 6vw, 4.5rem);
+}
+
+.highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.underline {
+  height: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+
+  @media (max-width: v.$bp-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: v.$bp-mobile) {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+.card {
+  grid-column: span 2;
+  min-height: 310px;
+  padding: 36px;
+  border-radius: 16px;
+  background: v.$color-bg-muted;
+  text-align: left;
+
+  &:nth-child(n + 4) {
+    grid-column: span 3;
+    min-height: 280px;
+  }
+
+  @media (max-width: v.$bp-tablet) {
+    grid-column: span 1;
+    min-height: auto;
+
+    &:nth-child(n + 4) {
+      grid-column: span 1;
+    }
+
+    &:nth-child(5) {
+      grid-column: span 2;
+    }
+  }
+
+  @media (max-width: v.$bp-mobile) {
+    padding: 27px;
+
+    &:nth-child(5) {
+      grid-column: span 1;
+    }
+  }
+}
+
+.number {
+  display: block;
+  font-size: clamp(3.1rem, 5vw, 4.5rem);
+  font-weight: v.$fw-black;
+  line-height: 0.9;
+  color: v.$color-accent-blue;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: v.$fw-semibold;
+  line-height: 1.15;
+  color: v.$color-text-secondary;
+  margin-bottom: 16px;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.55;
+  color: v.$color-text-muted;
+}

@@ -1,0 +1,30 @@
+@use "../../styles/variables" as v;
+
+.section {
+  padding-block: clamp(3.5rem, 7vw, 6.5rem);
+}
+
+.title {
+  text-align: center;
+  font-size: clamp(1.9rem, 3vw, 2.4rem);
+  font-weight: v.$fw-bold;
+  color: v.$color-text-secondary;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 24px;
+  align-content: start;
+
+  @media (max-width: v.$bp-tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

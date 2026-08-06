@@ -1,0 +1,65 @@
+@use "../../styles/variables" as v;
+
+.section {
+  background: v.$color-bg-muted;
+  padding-block: clamp(4rem, 6vw, 5.5rem);
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 32px;
+}
+
+.imageWrapper {
+  position: relative;
+  flex: 1 1 47%;
+  min-width: 300px;
+  height: clamp(320px, 30vw, 430px);
+  border-radius: v.$radius-card-lg;
+  overflow: hidden;
+
+  @media (max-width: v.$bp-tablet) {
+    flex-basis: 100%;
+    aspect-ratio: 4 / 3;
+    height: auto;
+  }
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.content {
+  flex: 1 1 48%;
+  min-width: 300px;
+
+  @media (max-width: v.$bp-tablet) {
+    flex-basis: 100%;
+  }
+}
+
+.title {
+  font-size: clamp(1.9rem, 2.8vw, 2.5rem);
+  font-weight: v.$fw-bold;
+  color: v.$color-text;
+  margin-bottom: 16px;
+}
+
+.paragraph {
+  font-size: 15px;
+  line-height: 1.55;
+  color: v.$color-text-muted;
+  max-width: 480px;
+
+  strong {
+    font-weight: v.$fw-semibold;
+    color: v.$color-text;
+  }
+}
+
+.cta {
+  margin-top: 22px;
+}
