@@ -1,6 +1,5 @@
 "use client";
 
-import { Plus, Minus } from "lucide-react";
 import { useId } from "react";
 import styles from "./AccordionItem.module.scss";
 
@@ -30,7 +29,12 @@ export default function AccordionItem({
           onClick={onToggle}
         >
           <span className={styles.icon}>
-            {isOpen ? <Minus size={16} /> : <Plus size={16} />}
+            <img
+              src={isOpen ? "/menos.svg" : "/más.svg"}
+              alt=""
+              aria-hidden="true"
+              className={styles.iconImage}
+            />
           </span>
           <span className={styles.question}>{question}</span>
         </button>

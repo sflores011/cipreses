@@ -33,4 +33,27 @@ export const MEDIA = {
     audienceImage:
       "https://multimedia.aumenta.do/wp-content/uploads/2026/08/cps-nosotros3.webp",
   },
+
+  projects: {
+    heroImage:
+      "https://multimedia.aumenta.do/wp-content/uploads/2026/08/cps-proyecto1.webp",
+
+    items: [
+      {
+        image:
+          "https://multimedia.aumenta.do/wp-content/uploads/2026/08/cps-proyecto2.webp",
+        slug: "tramo-vas-carretera-el-salvador",
+      },
+      {
+        image:
+          "https://multimedia.aumenta.do/wp-content/uploads/2026/08/cps-proyecto3.webp",
+        slug: "tramo-vas-ciudad-de-guatemala",
+      },
+      {
+        image:
+          "https://multimedia.aumenta.do/wp-content/uploads/2026/08/cps-proyecto4.webp",
+        slug: "tramo-vas-carretera-al-pacifico",
+      },
+    ],
+  },
 } as const;

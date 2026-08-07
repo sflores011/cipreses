@@ -29,17 +29,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  border: 1px solid v.$color-border-soft;
-  color: v.$color-text-muted;
-  transition: color v.$transition-base, border-color v.$transition-base;
+  width: 18px;
+  height: 18px;
 }
 
-.open .icon {
-  color: v.$color-primary;
-  border-color: v.$color-primary;
+.iconImage {
+  display: block;
+  width: 16px;
+  height: auto;
 }
 
 .question {
@@ -58,7 +55,7 @@
 }
 
 .answer {
-  padding: 0 26px 22px 66px;
+  padding: 0 26px 22px 60px;
   font-size: 13px;
   line-height: 1.55;
   color: v.$color-text-muted;

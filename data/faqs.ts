@@ -42,6 +42,37 @@ export const ABOUT_FAQS_LEFT: FaqItemData[] = [
   },
 ];
 
+export const PROJECTS_FAQS_LEFT: FaqItemData[] = [
+  {
+    question: "¿Quién opera Carretera VAS?",
+    answer:
+      "Cipreses y Pinos opera los tres tramos de Carretera VAS, garantizando su funcionamiento diario.",
+  },
+  {
+    question: "¿Cuántos tramos tiene VAS?",
+    answer:
+      "Carretera VAS está compuesta por tres tramos: Carretera a El Salvador, Ciudad de Guatemala y Carretera al Pacífico.",
+  },
+];
+
+export const PROJECTS_FAQS_RIGHT: FaqItemData[] = [
+  {
+    question: "¿Cómo mejora VAS la movilidad en Guatemala?",
+    answer:
+      "Conectando puntos clave de la red vial del país, agilizando el ingreso a la capital y reduciendo tiempos de recorrido para miles de usuarios cada día.",
+  },
+  {
+    question: "¿Cómo contacto a Cipreses y Pinos?",
+    answer:
+      "Puedes escribirnos a través del botón de contacto en la parte superior de esta página o mediante nuestras redes sociales.",
+  },
+  {
+    question: "¿Qué es Cipreses y Pinos?",
+    answer:
+      "Un operador guatemalteco de infraestructura de alto nivel. Gestionamos, mantenemos y damos continuidad a proyectos ya construidos.",
+  },
+];
+
 export const ABOUT_FAQS_RIGHT: FaqItemData[] = [
   {
     question: "¿Qué proyectos opera Cipreses y Pinos?",
