@@ -6,7 +6,6 @@ import PurposeSection from "@/components/about/PurposeSection";
 import OperationPrinciples from "@/components/about/OperationPrinciples";
 import AudienceSection from "@/components/about/AudienceSection";
 import FaqSection from "@/components/home/FaqSection";
-import Footer from "@/components/home/Footer";
 import { ABOUT_FAQS_LEFT, ABOUT_FAQS_RIGHT } from "@/data/faqs";
 
 export const metadata: Metadata = {
@@ -17,17 +16,14 @@ export const metadata: Metadata = {
 
 export default function NosotrosPage() {
   return (
-    <>
-      <main>
-        <AboutHero />
-        <AboutStats />
-        <AboutStatement />
-        <PurposeSection />
-        <OperationPrinciples />
-        <AudienceSection />
-        <FaqSection faqsLeft={ABOUT_FAQS_LEFT} faqsRight={ABOUT_FAQS_RIGHT} />
-      </main>
-      <Footer />
-    </>
+    <main>
+      <AboutHero />
+      <AboutStats />
+      <AboutStatement />
+      <PurposeSection />
+      <OperationPrinciples />
+      <AudienceSection />
+      <FaqSection faqsLeft={ABOUT_FAQS_LEFT} faqsRight={ABOUT_FAQS_RIGHT} />
+    </main>
   );
 }
